@@ -1,0 +1,259 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!! NAVIGATION BAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.navigation-bar {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  margin: auto;
+  align-items: center;
+}
+
+.background-filter {
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(61, 61, 61));
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  z-index: -1;
+  opacity: 0.9;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  top: 0;
+}
+
+.logo-container,
+.contacts {
+  display: flex;
+}
+
+.logo-container {
+  top: 20px;
+  left: 5%;
+  font-style: italic;
+  font-weight: 800;
+  flex: 1.7;
+  margin-left: 7%;
+}
+
+.training {
+  background: linear-gradient(to right, rgb(133, 133, 133), rgb(245, 245, 245));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.studio {
+  background: linear-gradient(to right, rgba(218, 62, 14), rgb(221, 46, 3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav {
+  flex: 1.4;
+}
+.contacts {
+  justify-content: space-around;
+  list-style: none;
+  margin-right: 8%;
+}
+
+.contacts li:hover {
+  color: rgb(221, 46, 3);
+}
+
+.contacts li {
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.05s;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: rgb(221, 46, 3);
+}
+.sign-up {
+  box-sizing: border-box;
+  position: relative;
+  background: rgb(221, 46, 3);
+}
+.sign-up:hover {
+  background: rgb(27, 27, 27);
+  transition: 0.1s;
+}
+.sign-up {
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.sign-up span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+}
+
+.sign-up span:after {
+  content: "\00bb";
+  color: white;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.sign-up:hover span {
+  padding-right: 25px;
+}
+
+.sign-up:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!! NAVIGATION BAR FINISH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+html {
+  background: rgb(240, 229, 229);
+}
+.box {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -250px;
+  box-shadow: 0px 0px 4px 1px rgb(189, 186, 186);
+  z-index: -1;
+  animation: appear 0.7s ease forwards;
+}
+.gym-option,
+.services {
+  z-index: 1;
+  position: relative;
+  width: 450px;
+  height: 200px;
+  margin-left: 25px;
+  margin-top: 33.3px;
+}
+.text {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+}
+.member-text {
+  color: rgb(61, 61, 61);
+}
+.log-in {
+  color: rgb(221, 46, 3);
+}
+.log-in:hover {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.member-sign-up {
+  background: rgb(97, 96, 96);
+  top: 62.5px;
+}
+/*!  break line */
+.or:before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 2px;
+  background: rgb(221, 46, 3);
+  position: absolute;
+  margin-left: -220px;
+  margin-top: 15px;
+}
+.or {
+  position: absolute;
+  left: 239px;
+  font-weight: 800;
+  font-size: 20px;
+  color: rgb(221, 46, 3);
+}
+.or:after {
+  content: "";
+  display: block;
+  width: 190px;
+  height: 2px;
+  background: rgb(221, 46, 3);
+  position: absolute;
+  margin-left: 49px;
+  margin-top: -15px;
+}
+/*? break line */
+
+.facebook {
+  background: rgb(66, 103, 178);
+  top: 16.6px;
+}
+.google {
+  bottom: 16.6px;
+  background: rgb(66, 133, 244);
+}
+.member-sign-up,
+.google,
+.facebook {
+  position: absolute;
+  z-index: 2;
+  width: 400px;
+  height: 75px;
+  margin-left: 25px;
+}
+.facebook-logo,
+.google-logo {
+  height: 50px;
+  width: 50px;
+  margin-top: 12.5px;
+  margin-left: 12.5px;
+  border-radius: 4px;
+  background: white;
+}
+.sign-up-text {
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 26px;
+  color: white;
+  font-weight: 400;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  70% {
+    transform: translateY(13px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes invisible {
+  0% {
+    opacity: 0.5;
+    transform: translateX(145px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.member-sign-up:hover,
+.facebook:hover,
+.google:hover {
+  box-shadow: 0px 0px 4px 1px rgb(94, 92, 92);
+  cursor: pointer;
+}
